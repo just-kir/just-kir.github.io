@@ -24,6 +24,20 @@
    display: table-cell;
    vertical-align: top;
  }
+ .thumbnail.right-caption > img {
+     float: left;
+     margin-right: 9px;
+ }
+
+ .thumbnail.right-caption {
+     float: left;
+ }
+
+ .thumbnail.right-caption > .caption {
+     padding: 4px;
+ }
+ ​
+
  html,
  body {
    height: 100%;
