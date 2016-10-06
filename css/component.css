@@ -44,7 +44,7 @@
 	height: 30px;
 	border-top: 10px solid #fff;
 	border-bottom: 10px solid #fff;
-	background-color: #ddd;
+	background-color: #999;
 	cursor: pointer;
 	margin: 0 3px;
 	transition: background-color 0.2s;
@@ -55,7 +55,7 @@
 }
 
 .slideshow > navy span.current {
-	background-color: #aaa;
+	background-color: black;
 }
 
 .description {
