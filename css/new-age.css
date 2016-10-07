@@ -264,6 +264,7 @@ section.features  {
   padding: 100px 0;
   position: relative;
   background: -webkit-linear-gradient(rgb(255, 140, 102), rgb(255, 140, 102));
+  background: -moz-linear-gradient(rgb(255, 140, 102), rgb(255, 140, 102));
   background: linear-gradient(rgb(255, 140, 102),rgb(255, 140, 102));
   color: white;
 }
