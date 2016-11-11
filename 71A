@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+int main ()
+{
+    int b , c, j;
+    string n;
+    cin>>b;
+
+    for (int i=0;i<b;i++)
+    {
+        cin>>n;
+		int x=n.size();
+    if (x<=10)
+    cout<<n<<endl;
+    else
+	{
+    c=n.size();
+    c=c-1;
+    j=n.size();
+    j=j-2;
+cout << n[0]<<j<<n[c]<<endl;
+	}
+}
+
+
+return 0 ;
+
+}
