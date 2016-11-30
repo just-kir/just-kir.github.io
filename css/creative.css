@@ -43,7 +43,12 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #F05F40;
+  background-color: rgb(54, 57, 66);
+}
+.bg-primary h1{
+  margin-top: 20px;
+  font-size: 50px;
+  margin-top: 20px;
 }
 .bg-dark {
   background-color: #222222;
