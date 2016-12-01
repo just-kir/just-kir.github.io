@@ -151,6 +151,11 @@ aside {
     color: #F05F40;
   }
 }
+.big-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 150px;
+}
 header {
   position: relative;
   width: 100%;
