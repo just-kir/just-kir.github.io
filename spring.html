@@ -377,7 +377,7 @@
           <h3><i class="fa fa-book"></i> Занятия и мастерские</h3>
           <p>Занятия в классах, математические турниры, физические эксперименты и какой-то текст.</p>
 
-          <h3><i class="fa fa-bathtub"></i> Комфортные условия</h3>
+          <h3><i class="fa fa-heart"></i> Комфортные условия</h3>
           <p>Трехместные номера с удобствами внутри и четырехразовое питание. </p>
 
           <h3><i class="fa fa-camera"></i> Экскурсии и развлечения</h3>
@@ -389,11 +389,14 @@
           </div>
           </div>
           <div class = "col-lg-4 col-md-4 col-sm-6" style="margin-top: 20px;">
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Выпадающая шутка">
-                Не забыли<br> про <u class="dotted">промокод?</u></button>
+
+              <button type="button" class="btn btn-default" data-toggle="popover" data-container="body"
+              title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+              Не забыли<br> <u class="dotted">промокод?</u></button>
           </div>
         </div>
         </div>
+
 
 
         <div class="col-lg-6 col-md-5">
@@ -443,6 +446,11 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
   </body>
 
   </html>
