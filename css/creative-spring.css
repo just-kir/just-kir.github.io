@@ -495,3 +495,132 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+
+/* Portraits */
+.portraits-header {
+	z-index: 6;
+	position: relative;
+}
+
+.portraits {
+	height: 700px;
+	position: relative;
+	/* top: -80px; */
+}
+
+.portrait {
+	display: inline-block;
+	position: absolute;
+}
+
+.portrait.level-1 { z-index: 5; }
+.portrait.level-2 { z-index: 4; }
+.portrait.level-3 { z-index: 3; }
+.portrait.level-4 { z-index: 2; }
+
+
+.portrait:nth-child(1) { left: 240px; top: 370px; }
+.portrait:nth-child(2) { left: 640px; top: 30px; }
+.portrait:nth-child(3) { left: 610px; top: 300px; }
+.portrait:nth-child(4) { left: 400px; top: 250px; }
+.portrait:nth-child(5) { left: 500px; top: 50px; }
+.portrait:nth-child(6) { left: 200px; top: 200px; }
+.portrait:nth-child(7) { left: 670px; top: 420px; }
+.portrait:nth-child(8) { left: 770px; top: 305px; }
+
+.portrait:nth-child(9) { left: 550px; top: 330px; }
+.portrait:nth-child(10) { left: 530px; top: 200px; }
+.portrait:nth-child(11) { left: 830px; top: 430px; }
+.portrait:nth-child(12) { left: 220px; top: 20px; }
+.portrait:nth-child(13) { left: 360px; top: 70px; }
+.portrait:nth-child(14) { left: 570px; top: 465px; }
+.portrait:nth-child(15) { left: 40px; top: 400px; }
+.portrait:nth-child(16) { left: 620px; top: 250px; }
+.portrait:nth-child(17) { left: 820px; top: 210px; }
+.portrait:nth-child(18) { left: 400px; top: 520px; }
+.portrait:nth-child(19) { left: 390px; top: 30px; }
+
+.portrait.with-cite:nth-child(2) .cite {
+	top: -30px;
+}
+
+@media (max-width: 1100px) {
+	.portrait:nth-child(9),
+	.portrait:nth-child(10),
+	.portrait:nth-child(12),
+	.portrait:nth-child(17) {
+		display: none;
+	}
+
+	.portrait:nth-child(1) { left: 420px; }
+}
+
+@media (max-width: 940px) {
+	.portrait:nth-child(6) {
+		display: none;
+	}
+
+	.portrait:nth-child(1) { left: 320px; }
+}
+
+.portrait.large img {
+	width: 270px;
+	min-width: 250px;
+	height: auto;
+}
+
+.portrait.medium img {
+	width: 170px;
+	min-width: 170px;
+	height: auto;
+}
+
+.portrait.small img {
+	width: 130px;
+	min-width: 130px;
+	height: auto;
+}
+
+.portrait.with-cite .cite {
+	position: absolute;
+	top: 20px;
+}
+
+.portrait.with-cite-left .cite {
+	right: 150px;
+}
+
+.portrait.with-cite-right .cite {
+	left: 200px;
+}
+
+.portrait.with-cite-left img {
+	margin-left: 120px;
+}
+
+.portrait.with-cite-right img {
+	margin-right: 145px;
+}
+
+.portrait.with-cite .title {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 7px 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.portrait.with-cite .about {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 5px 0 7px;
+    font-weight: 800;
+}
+
+.portrait.with-cite .text {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 21px;
+}
+/* End of portraits */
