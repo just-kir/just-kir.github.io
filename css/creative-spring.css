@@ -519,19 +519,19 @@ body {
 .portrait.level-4 { z-index: 2; }
 
 
-.portrait:nth-child(1) { left: 240px; top: 370px; }
-.portrait:nth-child(2) { left: 640px; top: 30px; }
-.portrait:nth-child(3) { left: 610px; top: 300px; }
-.portrait:nth-child(4) { left: 400px; top: 250px; }
-.portrait:nth-child(5) { left: 500px; top: 50px; }
-.portrait:nth-child(6) { left: 200px; top: 200px; }
-.portrait:nth-child(7) { left: 670px; top: 420px; }
-.portrait:nth-child(8) { left: 770px; top: 305px; }
+.portrait:nth-child(1) { left: 40px; top: 370px; }
+.portrait:nth-child(2) { left: 440px; top: 30px; }
+.portrait:nth-child(3) { left: 410px; top: 300px; }
+.portrait:nth-child(4) { left: 300px; top: 250px; }
+.portrait:nth-child(5) { left: 300px; top: 50px; }
+.portrait:nth-child(6) { left: 00px; top: 200px; }
+.portrait:nth-child(7) { left: 470px; top: 420px; }
+.portrait:nth-child(8) { left: 570px; top: 305px; }
 
-.portrait:nth-child(9) { left: 550px; top: 330px; }
-.portrait:nth-child(10) { left: 530px; top: 200px; }
-.portrait:nth-child(11) { left: 830px; top: 430px; }
-.portrait:nth-child(12) { left: 220px; top: 20px; }
+.portrait:nth-child(9) { left: 350px; top: 330px; }
+.portrait:nth-child(10) { left: 330px; top: 200px; }
+.portrait:nth-child(11) { left: 630px; top: 430px; }
+.portrait:nth-child(12) { left: 20px; top: 20px; }
 .portrait:nth-child(13) { left: 360px; top: 70px; }
 .portrait:nth-child(14) { left: 570px; top: 465px; }
 .portrait:nth-child(15) { left: 40px; top: 400px; }
