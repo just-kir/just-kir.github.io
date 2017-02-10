@@ -74,7 +74,7 @@
                 <img src="img/drawing.svg.png.png"  height="280" width="280"></img>
                 <h1 id="homeHeading">Весенняя школа по точным&nbsp;наукам</h1>
                 <br><br>
-                <a href="#" class="btn btn-primary btn-xl page-scroll">Зарегистрироваться</a>
+                <a href="#payment" class="btn btn-primary btn-xl page-scroll">Зарегистрироваться</a>
                 <br>
                 <br>
 
@@ -475,27 +475,32 @@
           <h1 style="font-size: 50px;"> Есть вопросы?</h1>
           <br><br>
           <p>Оставьте немного информации о себе и мы с вами свяжемся.</p>
+          <form id ='questions'>
           <div class="input-group input-group-lg">
-            <input type="text" class="form-control" placeholder="Имя" >
+            <input id="name" name="name" type="text" class="form-control" placeholder="Имя" required>
           </div>
 
 
           <div class="input-group input-group-lg">
-            <input type="text" class="form-control" placeholder="Фамилия">
+            <input id="surname" name="surname" type="text" class="form-control" placeholder="Фамилия" required>
           </div>
 
 
           <div class="input-group input-group-lg">
-            <input type='email' class="form-control" placeholder="Электронная почта">
+            <input id="e-mail" name="e-mail" type='email' class="form-control" placeholder="Электронная почта" required>
           </div>
 
           <div class="input-group input-group-lg">
-            <input type='tel' class="form-control" placeholder="Телефон">
+            <input id="tel" name="tel" type='tel' class="form-control" placeholder="Телефон" required>
           </div>
           <br>
-        <div class="input-group">
-        <a href="#" class="page-scroll btn btn-primary btn-new btn-xl sr-icons"> Оставить заявку</a>
+        <div id="success-submit"  class="alert alert-success" role="alert" style="display:none;">
+          Спасибо! Мы перезвоним.
         </div>
+        <div id= "button-submit" class="input-group">
+        <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Оставить заявку</button>
+        </div>
+        </form>
       </div>
       </div>
     </div>
@@ -541,7 +546,7 @@
           <form id ='delivery'>
             <div id='success' style="display:none;"><p>Спасибо! Все получилось.</p></div>
           <div class="input-group" id="email-form">
-            <input id='email' name ='email' type="email" class="form-control" placeholder="e-mail">
+            <input id='email' name ='email' type="email" class="form-control" placeholder="e-mail" required>
             <span class="input-group-btn">
 
               <button type='submit' class="btn btn-primary" type="button"><i class="fa fa-long-arrow-right"></i></button>
