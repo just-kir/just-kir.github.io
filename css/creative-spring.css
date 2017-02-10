@@ -619,7 +619,8 @@ body {
 }
 
 .portrait.with-cite .text {
-    font-size: 19px;
+    font-size: 16px;
+    color:black;
     font-weight: 400;
     line-height: 21px;
 }
