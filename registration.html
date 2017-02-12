@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Весенняя Пуанкаре-школа</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative-spring.css" rel="stylesheet">
+    <link rel="icon" href="img/gaika_2.png">
+
+
+
+    <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+       <script type="text/javascript">
+           function makePayment(amount, orderId, description, name, email, phone) {
+               var params = {
+                   //Код терминала (обязательный параметр), выдается банком.
+                   TerminalKey: "1486635284865DEMO",
+                   //Сумма заказа в копейках (обязательный параметр)
+                   Amount: amount,
+                   //Номер заказа (если не передан, принудительно устанавливается timestamp)
+                   OrderId: orderId,
+                   //Описание заказа (не обязательный параметр)
+                   Description: description,
+                   //Дополнительные параметры платежа
+                   DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
+                   //Флаг открытия платежной формы во фрейме
+                   Frame: true
+               };
+               doPay(params);
+           }
+       </script>
+       <style> .tinkoffPayRow { display: block; margin: 1%; width: 160px; } </style>
+</head>
+<body>
+
+<div class = "container">
+
+<h1> Регистрация в Весеннюю Пуанкаре-школу</h1>
+<br><br><br>
+
+<form>
+
+<div class = "form-group">
+ <h2>Укажите данные об участнике Пуанкаре-школы</h2>
+
+<div class="input-group input-group-lg">
+  <input id="surnameс" name="surnameс" type="text" class="form-control" placeholder="Фамилия" required>
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="nameс" name="nameс" type="text" class="form-control" placeholder="Имя" required>
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="patronymicс" name="patronymicс" type="text" class="form-control" placeholder="Отчество">
+</div>
+
+
+
+
+<div class="input-group input-group-lg">
+<select class="form-control">
+  <option>6 класс</option>
+  <option>7 класс</option>
+  <option>8 класс</option>
+  <option>9 класс</option>
+  <option>10 класс</option>
+  <option>11 класс</option>
+</select>
+</div>
+
+
+
+<div class="input-group input-group-lg">
+  <label>Укажите номер паспорта или свидетельства о рождении участника</label>
+  <input id="datesс" name="dateс" type="text" class="form-control" placeholder="Серия и номер документа" required>
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа">
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="telc" name="telc" type='tel' class="form-control" placeholder="Телефон (если есть)">
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="emailc" name="emailc" type='email' class="form-control" placeholder="Электронная почта (если есть)">
+</div>
+<br><br>
+<h2>Данные о родителях</h2>
+<p>Пожалуйста, укажите верные данные о родителе участника школы.
+   Достаточно указать одного родителя: того, с кем будет заключаться договор об
+   участии подопечного в школе и с кем нужно связываться для решения текущих вопросов.</p>
+
+
+<div class="input-group input-group-lg">
+    <input id="namep" name="namep" type="text" class="form-control" placeholder="Фамилия, имя, отчество родителя" required>
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="telp" name="telp" type='tel' class="form-control" placeholder="Телефон родителя" required>
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="emailp" name="emailp" type='email' class="form-control" placeholder="Электронная почта родителя" required>
+</div>
+
+<br><br>
+<h2>Трансфер</h2>
+<p>Абзац для Ильдара</p>
+
+<div class="input-group input-group-lg">
+<div class="radio">
+  <label><input type="radio" name="optradio" checked><p>С нами</p></label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio"><p>Без нас</p></label>
+</div>
+
+</div>
+
+<br><br>
+<h2>Дополнительная информация</h2>
+
+<div class="input-group input-group-lg">
+  <input id="foodc" name="foodc" type='text' class="form-control" placeholder="Ограничения по питанию (если есть)">
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="medicinec" name="medicinec" type='text' class="form-control" placeholder="Медицинские показания (если есть)">
+</div>
+
+<div class="input-group input-group-lg">
+  <input id="additionc" name="additionc" type='text' class="form-control" placeholder="Дополнительная информация, примечания">
+</div>
+
+<div class="input-group input-group-lg">
+<div class="checkbox">
+  <label><input type="checkbox" value=""><p>Я согласен на обработку
+    <a href="#">персональных данных</a><p></label>
+</div>
+</div>
+
+<br><br>
+<h2>Оплата</h2>
+
+<div class = "row">
+<div class="col-md-9">
+  <div class="input-group input-group-lg">
+  <input id="promo" type="text" class="form-control" placeholder="Введите промокод" name="promo">
+  </div>
+</div>
+
+<div class = "col-md-3" style="margin-top: 25px;" >
+  <button type="button" class="btn btn-default" data-toggle="popover" data-container="body"
+  title="Промокод" data-content="Чтобы получить промокод приведи друга и вот тут вот сложная
+  инструкция на миллион слов, что ты получишь скидку 3000 рублей рублей рублей, еще
+  текст">
+  <u class="dotted">промокод?</u></button>
+</div>
+
+</div>
+
+<div id="price">
+  <h1 style="font-size: 50px;"> <b>27&nbsp;500&nbsp;&#8381;</b></h1>
+</div>
+<br>
+
+
+<br>
+<div id="success-submit"  class="alert alert-success" role="alert" style="display:none;">
+Спасибо! Мы перезвоним.
+</div>
+<div id= "button-submit" class="input-group">
+<button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Оставить заявку</button>
+</div>
+
+</div>
+</form>
+
+<script>
+function kkk() {
+  if (document.TinkoffPayForm.payEmail.value == "apple") {
+      return 200;
+  } else {
+  return 400;
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<form name="TinkoffPayForm">
+           <input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="paySum">
+           <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder">
+           <textarea class="tinkoffPayRow" type="text" placeholder="Описание заказа"
+                     name="payDesc"></textarea>
+           <input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="payName">
+           <input class="tinkoffPayRow" type="text" placeholder="E-mail" name="payEmail">
+           <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон"
+                  name="payPhone">
+           <input class="tinkoffPayRow" type="button"
+                  onclick="makePayment(kkk() * 100, document.TinkoffPayForm.payOrder.value,
+                                       document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
+                                       document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)"
+                  value="Оплатить">
+       </form>
+
+
+</div>
+       <script>
+       var inputBox = document.getElementById('promo');
+       var  codes_big = ['apple', 'lemon']
+       var  codes_medium = ['kitty', 'puppy']
+       var  codes_small = ['cake', 'icecream']
+       // Поздравляю! Вы добрались до скидок.
+       inputBox.onkeyup = function(){
+          if ((codes_big.indexOf(inputBox.value) > -1)){
+          document.getElementById('price').innerHTML =
+          "<h1 style=\"font-size: 50px;\"><b>24&nbsp;500 &#8381;</b></h1>";}
+          else if ((codes_medium.indexOf(inputBox.value) > -1)){
+            document.getElementById('price').innerHTML =
+            "<h1 style=\"font-size: 50px;\"><b>25&nbsp;500 &#8381;</b></h1>";}
+          else if ((codes_small.indexOf(inputBox.value) > -1)){
+            document.getElementById('price').innerHTML =
+            "<h1 style=\"font-size: 50px;\"><b>26&nbsp;500 &#8381;</b></h1>";}
+
+          else {
+            document.getElementById('price').innerHTML =
+            "<h1 style=\"font-size: 50px;\"><b>27&nbsp;500 &#8381;</b></h1>";
+          }
+       }
+       </script>
+
+
+       <script>
+     $(document).ready(function(){
+       $('[data-toggle="popover"]').popover();
+     });
+     </script>
+
+
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/creative.js"></script>
+<script src="js/parallax.js"></script>
+<script src='js/google-sheet.js'></script>
+</body>
+</html>
