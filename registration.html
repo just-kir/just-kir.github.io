@@ -63,11 +63,11 @@
  <h2>Укажите данные об участнике Пуанкаре-школы</h2>
 
  <div class="input-group input-group-lg">
-   <input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия">
+   <input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия" required>
  </div>
 
 <div class="input-group input-group-lg">
-  <input id="namec" name="namec" type='text' class="form-control" placeholder="Имя">
+  <input id="namec" name="namec" type='text' class="form-control" placeholder="Имя" required>
 </div>
 
 <div class="input-group input-group-lg">
@@ -92,11 +92,11 @@
 
 <div class="input-group input-group-lg">
   <label>Укажите номер паспорта или свидетельства о рождении участника</label>
-  <input id="datec" name="datec" type='text' class="form-control" placeholder="Имя">
+  <input id="datec" name="datec" type='text' class="form-control" placeholder="Номер документа" required>
 </div>
 
 <div class="input-group input-group-lg">
-  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа">
+  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа" required>
 </div>
 
 <div class="input-group input-group-lg">
@@ -161,7 +161,7 @@
 
 <br><br>
 <h2>Оплата</h2>
-
+<p>Абзац для Ильдара про формы оплаты</p>
 <div class = "row">
 <div class="col-md-9">
   <div class="input-group input-group-lg">
@@ -216,7 +216,9 @@ value="Зарегистрироваться и оплатить">Зарегис�
 </div>
 <div class="jumbotron col-md-5">
   <h1 style="font-size: 45px;">Оплата по<br>квитанции</h1>
+  <div id='contract'>
   <p><a href="#"><i class="fa fa-file-pdf-o"></i> Скачать квитацию </a></p>
+  </div>
   <div id= "button-submit-1" class="input-group">
   <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Зарегистрироваться</button>
   </div>
@@ -227,21 +229,6 @@ value="Зарегистрироваться и оплатить">Зарегис�
 
 
 </form>
-
-
-function make() {
-  if (document.TinkoffPayForm.payEmail.value == "apple") {
-      return 200;
-  } else {
-  return 400;
-  }
-}
-
-
-
-
-
-
 
 
 
@@ -261,17 +248,28 @@ function make() {
        inputBox.onkeyup = function(){
           if ((codes_big.indexOf(inputBox.value) > -1)){
           document.getElementById('price').innerHTML =
-          "<h1 style=\"font-size: 60px;\"><b>24&nbsp;500 &#8381;</b></h1>";}
+          "<h1 style=\"font-size: 60px;\"><b>24&nbsp;500 &#8381;</b></h1>";
+
+          document.getElementById('contract').innerHTML =
+          "<p><a href=\"https://google.com\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
           else if ((codes_medium.indexOf(inputBox.value) > -1)){
             document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 60px;\"><b>25&nbsp;500 &#8381;</b></h1>";}
+            "<h1 style=\"font-size: 60px;\"><b>25&nbsp;500 &#8381;</b></h1>";
+
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"https://yandex.ru\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
           else if ((codes_small.indexOf(inputBox.value) > -1)){
             document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 60px;\"><b>26&nbsp;500 &#8381;</b></h1>";}
+            "<h1 style=\"font-size: 60px;\"><b>26&nbsp;500 &#8381;</b></h1>";
+
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"https://apple.com\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
 
           else {
             document.getElementById('price').innerHTML =
             "<h1 style=\"font-size: 60px;\"><b>27&nbsp;500 &#8381;</b></h1>";
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"#\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
           }
        }
 
