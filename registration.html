@@ -10,6 +10,27 @@
     <meta name="author" content="">
 
     <title>Весенняя Пуанкаре-школа</title>
+    <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+    <script type="text/javascript">
+        function makePayment(amount, orderId, description, name, email, phone) {
+            var params = {
+                //Код терминала (обязательный параметр), выдается банком.
+                TerminalKey: "1486635284865DEMO",
+                //Сумма заказа в копейках (обязательный параметр)
+                Amount: amount,
+                //Номер заказа (если не передан, принудительно устанавливается timestamp)
+                OrderId: orderId,
+                //Описание заказа (не обязательный параметр)
+                Description: description,
+                //Дополнительные параметры платежа
+                DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
+                //Флаг открытия платежной формы во фрейме
+                Frame: true
+            };
+            doPay(params);
+        }
+    </script>
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,59 +46,39 @@
     <link href="css/creative-spring.css" rel="stylesheet">
     <link rel="icon" href="img/gaika_2.png">
 
-
-
-    <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
-       <script type="text/javascript">
-           function makePayment(amount, orderId, description, name, email, phone) {
-               var params = {
-                   //Код терминала (обязательный параметр), выдается банком.
-                   TerminalKey: "1486635284865DEMO",
-                   //Сумма заказа в копейках (обязательный параметр)
-                   Amount: amount,
-                   //Номер заказа (если не передан, принудительно устанавливается timestamp)
-                   OrderId: orderId,
-                   //Описание заказа (не обязательный параметр)
-                   Description: description,
-                   //Дополнительные параметры платежа
-                   DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
-                   //Флаг открытия платежной формы во фрейме
-                   Frame: true
-               };
-               doPay(params);
-           }
-       </script>
-       <style> .tinkoffPayRow { display: block; margin: 1%; width: 160px; } </style>
 </head>
 <body>
+
+
+
 
 <div class = "container">
 
 <h1> Регистрация в Весеннюю Пуанкаре-школу</h1>
 <br><br><br>
 
-<form>
+<form id="TinkoffPayForm" name="TinkoffPayForm">
 
-<div class = "form-group">
+
  <h2>Укажите данные об участнике Пуанкаре-школы</h2>
 
+ <div class="input-group input-group-lg">
+   <input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия" required>
+ </div>
+
 <div class="input-group input-group-lg">
-  <input id="surnameс" name="surnameс" type="text" class="form-control" placeholder="Фамилия" required>
+  <input id="namec" name="namec" type='text' class="form-control" placeholder="Имя" required>
 </div>
 
 <div class="input-group input-group-lg">
-  <input id="nameс" name="nameс" type="text" class="form-control" placeholder="Имя" required>
-</div>
-
-<div class="input-group input-group-lg">
-  <input id="patronymicс" name="patronymicс" type="text" class="form-control" placeholder="Отчество">
+  <input id="patronymicc" name="patronymicc" type='text' class="form-control" placeholder="Отчество">
 </div>
 
 
 
 
 <div class="input-group input-group-lg">
-<select class="form-control">
+<select class="form-control" id="grade" name="grade">
   <option>6 класс</option>
   <option>7 класс</option>
   <option>8 класс</option>
@@ -91,11 +92,11 @@
 
 <div class="input-group input-group-lg">
   <label>Укажите номер паспорта или свидетельства о рождении участника</label>
-  <input id="datesс" name="dateс" type="text" class="form-control" placeholder="Серия и номер документа" required>
+  <input id="datec" name="datec" type='text' class="form-control" placeholder="Номер документа" required>
 </div>
 
 <div class="input-group input-group-lg">
-  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа">
+  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа" required>
 </div>
 
 <div class="input-group input-group-lg">
@@ -129,13 +130,11 @@
 <p>Абзац для Ильдара</p>
 
 <div class="input-group input-group-lg">
-<div class="radio">
-  <label><input type="radio" name="optradio" checked><p>С нами</p></label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio"><p>Без нас</p></label>
-</div>
+<select class="form-control" id="travel" name="travel">
+  <option> С нами</option>
+  <option>Без нас</option>
 
+</select>
 </div>
 
 <br><br>
@@ -155,14 +154,14 @@
 
 <div class="input-group input-group-lg">
 <div class="checkbox">
-  <label><input type="checkbox" value=""><p>Я согласен на обработку
+  <label><input type="checkbox" value="" required><p>Я согласен на обработку
     <a href="#">персональных данных</a><p></label>
 </div>
 </div>
 
 <br><br>
 <h2>Оплата</h2>
-
+<p>Абзац для Ильдара про формы оплаты</p>
 <div class = "row">
 <div class="col-md-9">
   <div class="input-group input-group-lg">
@@ -179,61 +178,67 @@
 </div>
 
 </div>
-
+<br><br>
+  <center>
 <div id="price">
-  <h1 style="font-size: 50px;"> <b>27&nbsp;500&nbsp;&#8381;</b></h1>
+  <h1 style="font-size: 60px;"> <b>27&nbsp;500&nbsp;&#8381;</b></h1>
 </div>
+  </center>
 <br>
 
-
-<br>
-<div id="success-submit"  class="alert alert-success" role="alert" style="display:none;">
-Спасибо! Мы перезвоним.
-</div>
+<div class="row">
+<div class="jumbotron col-md-5">
+<h1 style="font-size: 45px;">Оплата<br> картой</h1>
 <div id= "button-submit" class="input-group">
-<button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Оставить заявку</button>
-</div>
+  <p>&nbsp;</p>
+
+  <input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="paySum" style="display:none;">
+  <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder" style="display:none;">
+  <textarea class="tinkoffPayRow" type="text" placeholder="Описание заказа"
+            name="payDesc" style="display:none;"></textarea>
+  <input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="payName" style="display:none;">
+  <input class="tinkoffPayRow" type="text" placeholder="E-mail" name="payEmail" style="display:none;">
+  <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон"
+         name="payPhone" style="display:none;">
+  <!--<input class="tinkoffPayRow" type="button"
+         onclick="makePayment(30 * 100, document.TinkoffPayForm.payOrder.value,
+                              document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
+                              document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)"
+         value="Оплатить">-->
+
+<button type='submit' class="tinkoffPayRow btn btn-primary btn-new btn-xl sr-icons"
+      type="button" onclick=""
+value="Зарегистрироваться и оплатить">Зарегистрироваться и оплатить</button>
 
 </div>
+</div>
+<div class="col-md-2">
+</div>
+<div class="jumbotron col-md-5">
+  <h1 style="font-size: 45px;">Оплата по<br>квитанции</h1>
+  <div id='contract'>
+  <p><a href="#"><i class="fa fa-file-pdf-o"></i> Скачать квитацию </a></p>
+  </div>
+  <div id= "button-submit-1" class="input-group">
+  <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Зарегистрироваться</button>
+  </div>
+</div>
+</div>
+
+
+
+
 </form>
 
-<script>
-function kkk() {
-  if (document.TinkoffPayForm.payEmail.value == "apple") {
-      return 200;
-  } else {
-  return 400;
-  }
-}
-</script>
 
 
 
 
 
-
-
-
-
-
-<form name="TinkoffPayForm">
-           <input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="paySum">
-           <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder">
-           <textarea class="tinkoffPayRow" type="text" placeholder="Описание заказа"
-                     name="payDesc"></textarea>
-           <input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="payName">
-           <input class="tinkoffPayRow" type="text" placeholder="E-mail" name="payEmail">
-           <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон"
-                  name="payPhone">
-           <input class="tinkoffPayRow" type="button"
-                  onclick="makePayment(kkk() * 100, document.TinkoffPayForm.payOrder.value,
-                                       document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
-                                       document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)"
-                  value="Оплатить">
-       </form>
 
 
 </div>
+<script src="vendor/jquery/jquery.min.js"></script>
        <script>
        var inputBox = document.getElementById('promo');
        var  codes_big = ['apple', 'lemon']
@@ -243,21 +248,44 @@ function kkk() {
        inputBox.onkeyup = function(){
           if ((codes_big.indexOf(inputBox.value) > -1)){
           document.getElementById('price').innerHTML =
-          "<h1 style=\"font-size: 50px;\"><b>24&nbsp;500 &#8381;</b></h1>";}
+          "<h1 style=\"font-size: 60px;\"><b>24&nbsp;500 &#8381;</b></h1>";
+
+          document.getElementById('contract').innerHTML =
+          "<p><a href=\"https://google.com\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
           else if ((codes_medium.indexOf(inputBox.value) > -1)){
             document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 50px;\"><b>25&nbsp;500 &#8381;</b></h1>";}
+            "<h1 style=\"font-size: 60px;\"><b>25&nbsp;500 &#8381;</b></h1>";
+
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"https://yandex.ru\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
           else if ((codes_small.indexOf(inputBox.value) > -1)){
             document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 50px;\"><b>26&nbsp;500 &#8381;</b></h1>";}
+            "<h1 style=\"font-size: 60px;\"><b>26&nbsp;500 &#8381;</b></h1>";
+
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"https://apple.com\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
 
           else {
             document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 50px;\"><b>27&nbsp;500 &#8381;</b></h1>";
+            "<h1 style=\"font-size: 60px;\"><b>27&nbsp;500 &#8381;</b></h1>";
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"#\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
           }
        }
-       </script>
 
+       function make() {
+         if ((codes_big.indexOf(inputBox.value) > -1)) {
+             return 24500;
+         } else if ((codes_medium.indexOf(inputBox.value) > -1)){
+         return 25500;
+         } else if ((codes_small.indexOf(inputBox.value) > -1)){
+           return 26500;
+         } else {
+           return 27500;
+         }
+       }
+
+       </script>
 
        <script>
      $(document).ready(function(){
@@ -265,8 +293,8 @@ function kkk() {
      });
      </script>
 
+ <script src='google-sheet.js'></script>
 
-<script src="vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -278,7 +306,6 @@ function kkk() {
 
 <!-- Theme JavaScript -->
 <script src="js/creative.js"></script>
-<script src="js/parallax.js"></script>
-<script src='js/google-sheet.js'></script>
+<script src='js/g-sheet.js'></script>
 </body>
 </html>
