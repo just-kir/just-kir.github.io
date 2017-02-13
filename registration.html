@@ -207,7 +207,7 @@
          value="Оплатить">-->
 
 <button type='submit' class="tinkoffPayRow btn btn-primary btn-new btn-xl sr-icons"
-      type="button" onclick=""
+      type="button" onclick="i = 1;"
 value="Зарегистрироваться и оплатить">Зарегистрироваться и оплатить</button>
 
 </div>
@@ -219,8 +219,11 @@ value="Зарегистрироваться и оплатить">Зарегис�
   <div id='contract'>
   <p><a href="#"><i class="fa fa-file-pdf-o"></i> Скачать квитацию </a></p>
   </div>
-  <div id= "button-submit-1" class="input-group">
-  <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button">Зарегистрироваться</button>
+  <div id= "button-sub" name="but2" class="input-group">
+  <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button" onclick="i = 2;">Зарегистрироваться</button>
+  </div>
+  <div id="success-sub"  class="alert alert-success" role="alert" style="display:none;">
+    Регистрация прошла успешно.
   </div>
 </div>
 </div>
@@ -240,6 +243,7 @@ value="Зарегистрироваться и оплатить">Зарегис�
 </div>
 <script src="vendor/jquery/jquery.min.js"></script>
        <script>
+       var i;
        var inputBox = document.getElementById('promo');
        var  codes_big = ['apple', 'lemon']
        var  codes_medium = ['kitty', 'puppy']

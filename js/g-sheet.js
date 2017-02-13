@@ -37,9 +37,15 @@ $("#TinkoffPayForm").submit(function(event){
         console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
+        console.log(i);
+        if (i == 1){
         makePayment(make()*100, document.TinkoffPayForm.payOrder.value,
                        document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
-                       document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)
+                       document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)}
+        if (i ==2) {
+          $('#button-sub').hide();
+          $('#success-sub').show();
+        }
     });
 
     // Callback handler that will be called on failure
