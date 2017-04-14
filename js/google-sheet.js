@@ -85,7 +85,7 @@ $("#questions").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbx6Wm_ZOa5okZmWtESWx6foq9_UIVJvnuLwQNypwNHkGQl_uuXc/exec",
+        url: "https://script.google.com/macros/s/AKfycbxK0Es9YWEBkndm7IcoXTkJyMvOtCFvIj4GtevOA7o9bKiDXAIr/exec",
         type: "post",
         data: serializedData
     });
