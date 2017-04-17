@@ -25,7 +25,7 @@ $("#TinkoffPayForm").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbxqbK9or4JspQFZOLbCiMBEFSnFe9yiufXmKYVt8dRSTfoPJMg/exec",
+        url: "https://script.google.com/macros/s/AKfycbxscqfTzoN6Khxx7vFKKhYhJX_bmWCu6p0d0kyo4a--WBm1F5M/exec",
         type: "post",
         data: serializedData
     });
