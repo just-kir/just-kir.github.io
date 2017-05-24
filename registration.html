@@ -287,6 +287,13 @@ value="Зарегистрироваться и оплатить">Зарегис�
 
             document.getElementById('contract').innerHTML =
             "<p><a href=\"./summer2017-receipt-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+	       
+	  else if ((prepay.indexOf(inputBox.value) > -1)){
+            document.getElementById('price').innerHTML =
+            "<h1 style=\"font-size: 60px;\"><b>20&nbsp;000 &#8381;</b></h1>";
+
+            document.getElementById('contract').innerHTML =
+            "<p><a href=\"./summer2017-receipt-half.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}     
 
           else {
             document.getElementById('price').innerHTML =
@@ -303,6 +310,8 @@ value="Зарегистрироваться и оплатить">Зарегис�
          return 44500;
          } else if ((codes_small.indexOf(inputBox.value) > -1)){
            return 45500;
+	 } else if ((prepay.indexOf(inputBox.value) > -1)){
+           return 20000;	 
          } else {
            return 46500;
          }
