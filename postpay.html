@@ -161,28 +161,27 @@
          <script>
          var i;
          var inputBox = document.getElementById('promo');
-         // Поздравляю! Ты добрался до скидок. messwiththebest -- твой выбор.
          inputBox.onkeyup = function(){
             if ((codes_big.indexOf(inputBox.value) > -1)){
             document.getElementById('price').innerHTML =
             "<h1 style=\"font-size: 60px;\"><b>23&nbsp;500 &#8381;</b></h1>";
             document.getElementById('contract').innerHTML =
-            "<p><a href=\"./spring2017-receipt-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+            "<p><a href=\"./summer2017-receipt-post-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else if ((codes_medium.indexOf(inputBox.value) > -1)){
               document.getElementById('price').innerHTML =
               "<h1 style=\"font-size: 60px;\"><b>24&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./spring2017-receipt-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+              "<p><a href=\"./summer2017-receipt-post-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else if ((codes_small.indexOf(inputBox.value) > -1)){
               document.getElementById('price').innerHTML =
               "<h1 style=\"font-size: 60px;\"><b>25&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./spring2017-receipt-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+              "<p><a href=\"./summer2017-receipt-post-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else {
               document.getElementById('price').innerHTML =
               "<h1 style=\"font-size: 60px;\"><b>26&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./spring2017-receipt-full.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+              "<p><a href=\"./summer2017-receipt-post.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
             }
          }
          function make() {
