@@ -186,7 +186,7 @@ header {
 header .header-content {
   position: relative;
   text-align: center;
-  padding: 100px 15px 100px;
+  padding: 50px 15px 1000px;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
@@ -224,8 +224,8 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
   header .header-content .header-content-inner h1 {
-    margin-top: 20px;
-    font-size: 40px;
+    margin-top: 100px;
+    font-size: 50px;
   }
   header .header-content .header-content-inner p {
     font-size: 18px;
@@ -234,6 +234,10 @@ header .header-content .header-content-inner p {
     margin-right: auto;
     color: white;
   }
+
+    header .header-info {
+      padding: 270px 15px 1px;
+    }
 
   header .header-info p {
     font-size: 18px;
