@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Осенняя Пуанкаре-школа 2017</title>
+    <title>Весенняя Пуанкаре-школа 2018</title>
     <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
         <script type="text/javascript">
             function makePayment(amount, orderId, description, name, email, phone) {
@@ -64,8 +64,18 @@
 
 <div class = "container">
 
-  <h1> Регистрация на Осеннюю Пуанкаре-школу 2017</h1>
+<form id="TinkoffPayForm" name="TinkoffPayForm">
+  <h1> Регистрация на Весеннюю Пуанкаре-школу 2018</h1>
 <br><br>
+<div class="input-group input-group-lg">
+<select required class="form-control" id="shift" name="shift" >
+	 <option selected disabled value=''>Выберите даты:</option>
+     <option>25 марта &ndash; 1 апреля</option>
+     <option>8 &ndash; 15 апреля</option>
+</select>
+</div>
+
+ <br><br>
 <p>Скачайте, прочитайте и заполните
       <a href="./legal/fall2017-contract.docx">договор-акт</a>. Распечатайте и подпишите два экземпляра. </p>
   <p>Скачайте, прочитайте и заполните
@@ -73,8 +83,7 @@
   <p> Примечание. Нотариально заверять эту доверенность не надо. Если неудобно подписать ее обоим родителям,
     можно отредактировать и подписать кому-то одному.</p>
 
-<form id="TinkoffPayForm" name="TinkoffPayForm">
- <h2>Данные об участнике</h2>
+<h2>Данные об участнике</h2>
 
  <div class="input-group input-group-lg">
    <input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия" required>
