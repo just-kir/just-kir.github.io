@@ -1,4 +1,4 @@
-var  codes_big = ['messwiththebest', '4seasons']
+var  codes_big = ['messwiththebest', '4seasons', 'itedumipt']
 var  codes_medium = ['solved', 'LevPrav', 'levprav', 'vital', 'olva', 'temytch']
 var  codes_small = ['hypothesis','davinci']
 var  prepay = ['prepay']
