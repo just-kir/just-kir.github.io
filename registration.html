@@ -2,342 +2,319 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<title>Регистрация на Летнюю Пуанкаре-школу 2018</title>
+	<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+	<script type="text/javascript">
+		function makePayment(amount, orderId, description, name, email, phone) {
+			var params = {
+				//Код терминала (обязательный параметр), выдается банком.
+				TerminalKey: "1486635284865",
+				//Сумма заказа в копейках (обязательный параметр)
+				Amount: amount,
+				//Номер заказа (если не передан, принудительно устанавливается timestamp)
+				OrderId: orderId,
+				//Описание заказа (не обязательный параметр)
+				Description: description,
+				//Дополнительные параметры платежа
+				DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
+				//Флаг открытия платежной формы во фрейме
+				Frame: true
+			};
+			doPay(params);
+		}
+	</script>
 
-    <title>Весенняя Пуанкаре-школа 2018</title>
-    <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
-        <script type="text/javascript">
-            function makePayment(amount, orderId, description, name, email, phone) {
-                var params = {
-                    //Код терминала (обязательный параметр), выдается банком.
-                    TerminalKey: "1486635284865",
-                    //Сумма заказа в копейках (обязательный параметр)
-                    Amount: amount,
-                    //Номер заказа (если не передан, принудительно устанавливается timestamp)
-                    OrderId: orderId,
-                    //Описание заказа (не обязательный параметр)
-                    Description: description,
-                    //Дополнительные параметры платежа
-                    DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
-                    //Флаг открытия платежной формы во фрейме
-                    Frame: true
-                };
-                doPay(params);
-            }
-        </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- Plugin CSS -->
+	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+	<!-- Theme CSS -->
+	<link href="css/creative-spring.css" rel="stylesheet">
+	<link rel="icon" href="img/gaika_2.png">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/creative-spring.css" rel="stylesheet">
-    <link rel="icon" href="img/gaika_2.png">
-
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-88262588-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+		ga('create', 'UA-88262588-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </head>
+
 <body>
+	<div class = "container">
+		<form id="TinkoffPayForm" name="TinkoffPayForm">
+			<h1> Регистрация на Летнюю Пуанкаре-школу 2018</h1>
+			<br>
+			<p>Просим выполнить следующие действия.</p>
+			<p>1. Приобретите для участника билеты на рейсы в Белград и обратно. Желательно присоединиться к группе в Москве на «основные» рейсы: Москва-Белград 25 июня SU 2090 и Белград-Москва 12 июля SU 2091. При выборе других рейсов мы обеспечим встречу и проводы в аэропорту Белграда.</p>
+			<p>2. Оформите нотариально заверенное согласие родителей на выезд ребенка за пределы РФ.
+			<br>Образец согласия предоставит нотариус, страна назначения — республика Сербия, срок действия согласия должен охватывать фактические даты поездки, лучше «с запасом», сопровождающее лицо (если летите с группой) — Хисамбеев Ильдар Шамилевич (<a href="./img/khisambeev-passport.jpg">паспортные данные</a>).</p>
+			<p>3. Оформите медицинскую страховку для выезжающих за рубеж (например, любую <a href="https://www.sravni.ru/vzr/">здесь</a>).</p>
+			<p>4. Скачайте, прочитайте и заполните <a href="./legal/summer2018-contract.docx">договор-акт</a>. Распечатайте и подпишите два экземпляра.</p>
+			<p>5. Отправьте на электронную почту info@poincare.ru следующие документы:
+				<ul>
+					<li>скан или фото загранпаспорта участника;</li>
+					<li>авиабилеты;</li>
+					<li>скан или фото согласия на выезд;</li>
+					<li>скан или файл медстраховки.</li>
+				</ul>
+			</p>
+			<p>6. Скачайте <a href="./checklist-summer2018.pdf">памятку</a> — она пригодится при сборах.</p>
+			<p>7. Заполните форму ниже и внесите оплату или предоплату.</p>
 
+			<h2>Данные об участнике</h2>
+			<div class="input-group input-group-lg">
+				<input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия" required>
+			</div>
+			<div class="input-group input-group-lg">
+				<input id="namec" name="namec" type='text' class="form-control" placeholder="Имя" required>
+			</div>
+			<div class="input-group input-group-lg">
+				<input id="patronymicc" name="patronymicc" type='text' class="form-control" placeholder="Отчество">
+			</div>
 
-<div class = "container">
+			<div class="input-group input-group-lg">
+				<input id="dateb" name="dateb" type='text' class="form-control" placeholder="Дата рождения участника  " required>
+			</div>
 
-<form id="TinkoffPayForm" name="TinkoffPayForm">
-  <h1> Регистрация на Весеннюю Пуанкаре-школу 2018</h1>
+			<div class="input-group input-group-lg">
+				<label>Укажите город проживания.</label>
+				<input id="datec" name="datec" type='text' class="form-control" placeholder="Город" required>
+			</div>
 
-<!--
-<br><br>
-<div class="input-group input-group-lg">
-<select required class="form-control" id="shift" name="shift" >
-	 <option selected disabled value=''>Выберите даты:</option>
-     <option>25 марта &ndash; 1 апреля</option>
-     <option>8 &ndash; 15 апреля</option>
-</select>
-</div>
--->
+			<div class="input-group input-group-lg">
+				<input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа" required>
+			</div>
 
- <br><br>
-<p>Скачайте, прочитайте и заполните
-      <a href="./legal/spring2018-contract.docx">договор-акт</a>. Распечатайте и подпишите два экземпляра. </p>
-  <p>Скачайте, прочитайте и заполните
-      <a href="./legal/spring2018-poa.doc">доверенность</a>. Распечатайте и подпишите один экземпляр. </p>
-  <p> Примечание. Нотариально заверять эту доверенность не надо. Если неудобно подписать ее обоим родителям,
-    можно отредактировать и подписать кому-то одному.</p>
+			<div class="input-group input-group-lg">
+				<label>Какой класс закончили в 2017/18 учебном году?</label>
+				<select class="form-control" id="grade" name="grade" required>
+					<option>5 класс</option>
+					<option>6 класс</option>
+					<option>7 класс</option>
+					<option>8 класс</option>
+					<option>9 класс</option>
+					<option>10 класс</option>
+				</select>
+			</div>
 
-<h2>Данные об участнике</h2>
+			<div class="input-group input-group-lg">
+				<input id="telc" name="telc" type='tel' class="form-control" placeholder="Телефон (если есть)">
+			</div>
 
- <div class="input-group input-group-lg">
-   <input id="surnamec" name="surnamec" type='text' class="form-control" placeholder="Фамилия" required>
- </div>
+			<div class="input-group input-group-lg">
+				<input id="emailc" name="emailc" type='email' class="form-control" placeholder="Электронная почта (если есть)">
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="namec" name="namec" type='text' class="form-control" placeholder="Имя" required>
-</div>
+			<br><br>
+			<h2>Данные о родителях</h2>
+			<p>Пожалуйста, укажите верные данные о родителе участника школы.
+			Достаточно указать одного родителя: того, с кем будет заключаться договор и с кем нужно связываться для решения текущих вопросов.</p>
+			<div class="input-group input-group-lg">
+				<input id="namep" name="namep" type="text" class="form-control" placeholder="Фамилия, имя, отчество родителя" required>
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="patronymicc" name="patronymicc" type='text' class="form-control" placeholder="Отчество">
-</div>
+			<div class="input-group input-group-lg">
+				<input id="telp" name="telp" type='tel' class="form-control" placeholder="Телефон родителя" required>
+			</div>
 
+			<div class="input-group input-group-lg">
+				<input id="emailp" name="emailp" type='email' class="form-control" placeholder="Электронная почта родителя" required>
+			</div>
 
+			<br><br>
+			<h2>Трансфер</h2>
+			<p>В зависимости от выбранных рейсов укажите предпочтительную точку встречи. При полете "основным" рейсом из Москвы встретиться можем у аэроэкспресса или в Шереметьево. При полете другими рейсами, мы обеспечиваем встречу и проводы в аэропорту Белграда.<br><br>Пожалуйста, выберите ваш вариант из списка ниже.</p>
 
+			<div class="input-group input-group-lg">
+				<select class="form-control" id="travel" name="travel" required>
+					<option>Летим из Москвы "основным" рейсом, встреча в Шереметьево</option>
+					<option>Летим из Москвы "основным" рейсом, встреча на Белорусском вокзале</option>
+					<option>Летим другим рейсом, встреча в аэропорту Белграда</option>
+					<option>Добираемся до места проведения самостоятельно</option>
+					<option>Более сложная логистика, нужно решить индивидуально</option>
+				</select>
+			</div>
 
-<div class="input-group input-group-lg">
-<label>В каком классе учитесь?</label>
-<select class="form-control" id="grade" name="grade">
-  <option>6 класс</option>
-  <option>7 класс</option>
-  <option>8 класс</option>
-  <option>9 класс</option>
-  <option>10 класс</option>
-</select>
-</div>
+			<br><br>
+			<h2>Дополнительная информация</h2>
 
+			<p>Для занятий программированием просим участников взять с собой личный ноутбук. Если такой возможности нет, ноутбук мы предоставим.</p>
+			<div class="input-group input-group-lg">
+				<label>Возьмете ли в поездку личный ноутбук?</label>
+				<select class="form-control" id="notebook" name="notebook" required>
+					<option>Нет</option>
+					<option>Да</option>
+				</select>
+			</div>
 
+			<div class="input-group input-group-lg">
+				<input id="foodc" name="foodc" type='text' class="form-control" placeholder="Ограничения по питанию (если есть)">
+			</div>
 
-<div class="input-group input-group-lg">
-  <label>Укажите номер паспорта или свидетельства о рождении участника.</label>
-  <input id="datec" name="datec" type='text' class="form-control" placeholder="Номер документа" required>
-</div>
+			<div class="input-group input-group-lg">
+				<input id="medicinec" name="medicinec" type='text' class="form-control" placeholder="Медицинские показания (если есть)">
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="dateb" name="dateb" type='text' class="form-control" placeholder="Дата рождения участника  " required>
-</div>
+			<div class="input-group input-group-lg">
+				<input id="additionc" name="additionc" type='text' class="form-control" placeholder="Дополнительная информация, примечания">
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="schoolc" name="schoolc" type='text' class="form-control" placeholder="Школа" required>
-</div>
+			<div class="input-group input-group-lg">
+				<div class="checkbox">
+					<label><input type="checkbox" value="" required><p>Регистрируясь, я соглашаюсь на обработку введенных выше персональных данных в соответствии с <a href="./privacy-pol.pdf">политикой конфиденциальности</a>.</p></label>
+				</div>
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="telc" name="telc" type='tel' class="form-control" placeholder="Телефон (если есть)">
-</div>
+			<br><br>
+			<h2>Оплата</h2>
+			<p>Оплатить участие в Школе вы можете банковской картой или безналичным переводом.</p>
+			<p>Вы также можете оплатить школу по частям: внести 20 000 рублей сразу и оставшуюся часть с учетом скидки позже. Для этого в поле с промокодом введите "prepay". После оплаты на указанный вами адрес электронной почты придет ссылка, по которой вы сможете оплатить оставшуюся сумму. Там же вы сможете ввести промокод на скидку.</p>
+			<div class = "row">
+				<div class="col-md-3">
+					<div id="price">
+						<h2 style="font-size: 60px;"> <b>58&nbsp;500&nbsp;&#8381;</b></h2>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="input-group input-group-lg">
+						<input id="promo" type="text" class="form-control" placeholder="Введите промокод" name="promo">
+					</div>
+				</div>
+			</div>
 
-<div class="input-group input-group-lg">
-  <input id="emailc" name="emailc" type='email' class="form-control" placeholder="Электронная почта (если есть)">
-</div>
-<br><br>
-<h2>Данные о родителях</h2>
+			<br>
+			<div class="row">
+				<div class="jumbotron col-md-5">
+					<h2 style="font-size: 45px;">Оплата<br> картой</h2>
+					<p>Откроется окно с платежной страницей АО «Тинькофф Банк», где необходимо ввести данные вашей банковской карты. Данные по платежу защищены сертификатом SSL и протоколом 3D Secure.</p>
+					<div id= "button-submit" class="input-group">
+						<p>&nbsp;</p>
 
-	<p>Пожалуйста, укажите верные данные о родителе участника школы.
-	Достаточно указать одного родителя: того, с кем будет заключаться договор и с кем нужно связываться для решения текущих вопросов.</p>
-<div class="input-group input-group-lg">
-
-    <input id="namep" name="namep" type="text" class="form-control" placeholder="Фамилия, имя, отчество родителя" required>
-</div>
-
-<div class="input-group input-group-lg">
-  <input id="telp" name="telp" type='tel' class="form-control" placeholder="Телефон родителя" required>
-</div>
-
-<div class="input-group input-group-lg">
-  <input id="emailp" name="emailp" type='email' class="form-control" placeholder="Электронная почта родителя" required>
-</div>
-
-<br><br>
-<h2>Трансфер</h2>
-   <p>Будет организован заказной автобус из Москвы (предварительно &mdash; у метро Краснопресненская) до базы.
-     Встретить вас можем у автобуса, на базе или, при необходимости, отдельно в Москве (например, если участник едет сам из другого города).<br><br>Пожалуйста, выберите предпочтительный вариант из списка ниже.</p>
-
-<div class="input-group input-group-lg">
-<select class="form-control" id="travel" name="travel">
-     <option>Едем с вами из Москвы на автобусе</option>
-     <option>Самостоятельно добираемся до пансионата «Искра»</option>
-     <option>Необходима отдельная встреча в Москве</option>
-</select>
-</div>
-
-<br><br>
-<h2>Дополнительная информация</h2>
-
-<div class="input-group input-group-lg">
-  <input id="foodc" name="foodc" type='text' class="form-control" placeholder="Ограничения по питанию (если есть)">
-</div>
-
-<div class="input-group input-group-lg">
-  <input id="medicinec" name="medicinec" type='text' class="form-control" placeholder="Медицинские показания (если есть)">
-</div>
-
-<div class="input-group input-group-lg">
-  <input id="additionc" name="additionc" type='text' class="form-control" placeholder="Дополнительная информация, примечания">
-</div>
-
-<div class="input-group input-group-lg">
-<div class="checkbox">
-  <label><input type="checkbox" value="" required><p>Регистрируясь, я соглашаюсь на обработку введенных выше персональных данных в соответствии с
-    <a href="./privacy-pol.pdf">политикой конфиденциальности</a>.</p></label>
-</div>
-</div>
-
-<br><br>
-<h2>Оплата</h2>
-<p>Оплатить участие в Школе вы можете банковской картой или безналичным переводом.</p>
-
-<div class = "row">
-
-<div class="col-md-3">
-	<div id="price">
-    		<h1 style="font-size: 60px;"> <b>28&nbsp;500&nbsp;&#8381;</b></h1>
+						<input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="paySum" style="display:none;">
+						<input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder" style="display:none;">
+						<textarea class="tinkoffPayRow" type="text" placeholder="Описание заказа"
+											name="payDesc" style="display:none;"></textarea>
+						<input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="payName" style="display:none;">
+						<input class="tinkoffPayRow" type="text" placeholder="E-mail" name="payEmail" style="display:none;">
+						<input class="tinkoffPayRow" type="text" placeholder="Контактный телефон"
+									 name="payPhone" style="display:none;">
+						<!--
+						<input class="tinkoffPayRow" type="button"
+									 onclick="makePayment(30 * 100, document.TinkoffPayForm.payOrder.value,
+																				document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
+																				document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)"
+									 value="Оплатить">
+						-->
+						<button type='submit' class="tinkoffPayRow btn btn-primary btn-new btn-xl sr-icons"
+							type="button" onclick="i = 1;" value="Зарегистрироваться и оплатить">
+							Зарегистрироваться и оплатить
+						</button>
+					</div>
+				</div>
+				<div class="col-md-2">
+				</div>
+				<div class="jumbotron col-md-5">
+					<h2 style="font-size: 45px;">Оплата <br>переводом</h2>
+					<p>Совершите перевод в течение 3 рабочих дней после регистрации и пришлите фото платежного поручения.</p>
+					<div id='contract'>
+						<p><a href="./legal/summer2018-receipt-full.docx"><i class="fa fa-file-pdf-o"></i> Квитанция с реквизитами</a></p>
+					</div>
+					<div id= "button-sub" name="but2" class="input-group">
+						<button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button" onclick="i = 2;">Зарегистрироваться</button>
+					</div>
+					<div id="success-sub"  class="alert alert-success" role="alert" style="display:none;">
+						Регистрация прошла успешно.
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
-</div>
 
-<div class="col-md-9">
-  <div class="input-group input-group-lg">
-  <input id="promo" type="text" class="form-control" placeholder="Введите промокод" name="promo">
-  </div>
-</div>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="js/promo.js"></script>
+	<script>
+		var i;
+		var inputBox = document.getElementById('promo');
 
+		// Поздравляю! Ты добрался до скидок. messwiththebest -- твой выбор.
+		inputBox.onkeyup = function(){
+			if ((codes_big.indexOf(inputBox.value) > -1)) {
+				document.getElementById('price').innerHTML =
+				"<h2 style=\"font-size: 60px;\"><b>52&nbsp;000 &#8381;</b></h2>";
+				document.getElementById('contract').innerHTML =
+				"<p><a href=\"./legal/summer2018-receipt-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+			} else if ((codes_medium.indexOf(inputBox.value) > -1)) {
+				document.getElementById('price').innerHTML =
+				"<h2 style=\"font-size: 60px;\"><b>55&nbsp;500 &#8381;</b></h2>";
+				document.getElementById('contract').innerHTML =
+				"<p><a href=\"./legal/summer2018-receipt-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+			} else if ((codes_small.indexOf(inputBox.value) > -1)) {
+				document.getElementById('price').innerHTML =
+				"<h2 style=\"font-size: 60px;\"><b>57&nbsp;500 &#8381;</b></h2>";
+				document.getElementById('contract').innerHTML =
+				"<p><a href=\"./legal/summer2018-receipt-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+			} else if ((prepay.indexOf(inputBox.value) > -1)) {
+				document.getElementById('price').innerHTML =
+				"<h2 style=\"font-size: 60px;\"><b>20&nbsp;000 &#8381;</b></h2>";
+				document.getElementById('contract').innerHTML =
+				"<p><a href=\"./legal/summer2018-receipt-half.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+			} else {
+				document.getElementById('price').innerHTML =
+				"<h2 style=\"font-size: 60px;\"><b>58&nbsp;500 &#8381;</b></h2>";
+				document.getElementById('contract').innerHTML =
+				"<p><a href=\"./legal/summer2018-receipt-full.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+			}
+		}
 
-</div>
-<br>
+		function make() {
+			if ((codes_big.indexOf(inputBox.value) > -1)) {
+				return 52000;
+			} else if ((codes_medium.indexOf(inputBox.value) > -1)) {
+				return 55500;
+			} else if ((codes_small.indexOf(inputBox.value) > -1)) {
+				return 57500;
+			} else if ((prepay.indexOf(inputBox.value) > -1)) {
+				return 20000;
+			} else {
+				return 58500;
+			}
+		}
 
-<div class="row">
-<div class="jumbotron col-md-5">
-<h1 style="font-size: 45px;">Оплата<br> картой</h1>
-<p>Откроется окно с платежной страницей АО «Тинькофф Банк», где необходимо ввести данные вашей банковской карты. Данные по платежу защищены сертификатом SSL и протоколом 3D Secure.</p>
-<div id= "button-submit" class="input-group">
-  <p>&nbsp;</p>
+	</script>
 
-  <input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="paySum" style="display:none;">
-  <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder" style="display:none;">
-  <textarea class="tinkoffPayRow" type="text" placeholder="Описание заказа"
-            name="payDesc" style="display:none;"></textarea>
-  <input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="payName" style="display:none;">
-  <input class="tinkoffPayRow" type="text" placeholder="E-mail" name="payEmail" style="display:none;">
-  <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон"
-         name="payPhone" style="display:none;">
-  <!--<input class="tinkoffPayRow" type="button"
-         onclick="makePayment(30 * 100, document.TinkoffPayForm.payOrder.value,
-                              document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
-                              document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)"
-         value="Оплатить">-->
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
 
-<button type='submit' class="tinkoffPayRow btn btn-primary btn-new btn-xl sr-icons"
-      type="button" onclick="i = 1;"
-value="Зарегистрироваться и оплатить">Зарегистрироваться и оплатить</button>
-
-</div>
-</div>
-<div class="col-md-2">
-</div>
-<div class="jumbotron col-md-5">
-  <h1 style="font-size: 45px;">Оплата <br>переводом</h1>
-  <p>Совершите перевод в течение 3 рабочих дней после регистрации и пришлите фото платежного поручения.</p>
-  <div id='contract'>
-      <p><a href="./legal/spring2018-receipt-full.docx"><i class="fa fa-file-pdf-o"></i> Квитанция с реквизитами</a></p>
-  </div>
-  <div id= "button-sub" name="but2" class="input-group">
-  <button type='submit' class="btn btn-primary btn-new btn-xl sr-icons" type="button" onclick="i = 2;">Зарегистрироваться</button>
-  </div>
-  <div id="success-sub"  class="alert alert-success" role="alert" style="display:none;">
-    Регистрация прошла успешно.
-  </div>
-</div>
-</div>
-
-
-
-</form>
-
-
-
+	<script src='google-sheet.js'></script>
 
 
-
-
-
-</div>
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="js/promo.js"></script>
-       <script>
-       var i;
-       var inputBox = document.getElementById('promo');
-
-       // Поздравляю! Ты добрался до скидок. messwiththebest -- твой выбор.
-       inputBox.onkeyup = function(){
-          if ((codes_big.indexOf(inputBox.value) > -1)){
-          document.getElementById('price').innerHTML =
-            "<h1 style=\"font-size: 60px;\"><b>25&nbsp;500 &#8381;</b></h1>";
-
-          document.getElementById('contract').innerHTML =
-            "<p><a href=\"./legal/spring2018-receipt-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
-          else if ((codes_medium.indexOf(inputBox.value) > -1)){
-            document.getElementById('price').innerHTML =
-              "<h1 style=\"font-size: 60px;\"><b>26&nbsp;500 &#8381;</b></h1>";
-
-            document.getElementById('contract').innerHTML =
-              "<p><a href=\"./legal/spring2018-receipt-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
-          else if ((codes_small.indexOf(inputBox.value) > -1)){
-            document.getElementById('price').innerHTML =
-              "<h1 style=\"font-size: 60px;\"><b>27&nbsp;500 &#8381;</b></h1>";
-
-            document.getElementById('contract').innerHTML =
-              "<p><a href=\"./legal/spring2018-receipt-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
-
-          else {
-            document.getElementById('price').innerHTML =
-              "<h1 style=\"font-size: 60px;\"><b>28&nbsp;500 &#8381;</b></h1>";
-            document.getElementById('contract').innerHTML =
-              "<p><a href=\"./spring2018-receipt-full.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
-          }
-       }
-
-       function make() {
-         if ((codes_big.indexOf(inputBox.value) > -1)) {
-               return 25500;
-         } else if ((codes_medium.indexOf(inputBox.value) > -1)){
-           return 26500;
-         } else if ((codes_small.indexOf(inputBox.value) > -1)){
-             return 27500;
-         } else {
-             return 28500;
-         }
-       }
-
-       </script>
-
-       <script>
-     $(document).ready(function(){
-       $('[data-toggle="popover"]').popover();
-     });
-     </script>
-
- <script src='google-sheet.js'></script>
-
-
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="js/creative.js"></script>
-<script src='js/g-sheet.js'></script>
-
-
+	<!-- Bootstrap Core JavaScript -->
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Plugin JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+	<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<!-- Theme JavaScript -->
+	<script src="js/creative.js"></script>
+	<script src='js/g-sheet.js'></script>
 
 </body>
 </html>

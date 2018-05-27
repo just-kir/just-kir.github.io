@@ -1,5 +1,5 @@
-var  codes_big = ['messwiththebest', '4seasons', 'itedumipt', 'olympian', 'denka-2003', 'mail-popova', 'petrenkoonelove']
-var  codes_medium = ['solved', 'LevPrav', 'levprav', 'vital', 'olva', 'temytch', 'castlequiz']
-var  codes_small = ['hypothesis','davinci']
+var  codes_big = ['messwiththebest', 'perennial']
+var  codes_medium = ['akrobat76']
+var  codes_small = ['hypothesis']
 var  prepay = ['prepay']
 // Поздравляю! Ты добрался до скидок. messwiththebest -- твой выбор.
