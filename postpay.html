@@ -166,31 +166,31 @@
             document.getElementById('price').innerHTML =
             "<h1 style=\"font-size: 60px;\"><b>32&nbsp;000 &#8381;</b></h1>";
             document.getElementById('contract').innerHTML =
-            "<p><a href=\"./summer2017-receipt-post-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+            "<p><a href=\"./legal/summer2018-receipt-post-d3.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else if ((codes_medium.indexOf(inputBox.value) > -1)){
               document.getElementById('price').innerHTML =
               "<h1 style=\"font-size: 60px;\"><b>35&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./summer2017-receipt-post-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+              "<p><a href=\"./legal/summer2018-receipt-post-d2.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else if ((codes_small.indexOf(inputBox.value) > -1)){
               document.getElementById('price').innerHTML =
-              "<h1 style=\"font-size: 60px;\"><b>14&nbsp;700 &#8381;</b></h1>";
+              "<h1 style=\"font-size: 60px;\"><b>37&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./summer2017-receipt-post-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
+              "<p><a href=\"./legal/summer2018-receipt-post-d1.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";}
             else {
               document.getElementById('price').innerHTML =
               "<h1 style=\"font-size: 60px;\"><b>38&nbsp;500 &#8381;</b></h1>";
               document.getElementById('contract').innerHTML =
-              "<p><a href=\"./summer2017-receipt-post.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
+              "<p><a href=\"./legal/summer2018-receipt-post.docx\"><i class=\"fa fa-file-pdf-o\"></i> Скачать квитацию </a></p>";
             }
          }
          function make() {
            if ((codes_big.indexOf(inputBox.value) > -1)) {
                return 32000;
            } else if ((codes_medium.indexOf(inputBox.value) > -1)){
-           return 35500;
+							return 35500;
            } else if ((codes_small.indexOf(inputBox.value) > -1)){
-             return 14700;
+             return 37500;
            } else {
              return 38500;
            }
