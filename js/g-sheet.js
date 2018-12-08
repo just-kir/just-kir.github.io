@@ -1,4 +1,3 @@
-
 // Variable to hold request
 var request;
 
@@ -42,7 +41,7 @@ $("#TinkoffPayForm").submit(function(event){
         makePayment(make()*100, document.TinkoffPayForm.payOrder.value,
                        document.TinkoffPayForm.payDesc.value, document.TinkoffPayForm.payName.value,
                        document.TinkoffPayForm.payEmail.value, document.TinkoffPayForm.payPhone.value)}
-        if (i ==2) {
+        if (i == 2) {
           $('#button-sub').hide();
           $('#success-sub').show();
         }
