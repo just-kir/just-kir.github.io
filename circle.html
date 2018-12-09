@@ -84,8 +84,20 @@
 				<input id="quantity" name="quantity" type="number" name="quantity" min="1" class="form-control" placeholder="4" required>
 			</div>
 
+			<script>
+			var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+			for(var i = 0; i < hashParams.length; i++){
+			    var p = hashParams[i].split('=');
+			    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+			}
+
+			</script>
+
 			<h2> <b>Сумма к оплате: <span id="price">4</span>&nbsp;000&nbsp;&#8381;</b></h2>
 
+			<script>
+				document.getElementById('price').innerHTML = document.getElementById('quantity').value;
+			</script>
 
 					<div id= "button-submit" class="input-group">
 
