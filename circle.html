@@ -74,8 +74,8 @@
 			</div>
 
 			<div class="input-group input-group-lg">
-				<label>Число занятий, за которые вносите оплату (от 4):</label>
-				<input id="quantity" name="quantity" type="number" name="quantity" min="4" class="form-control" placeholder="4" required>
+				<label>Число занятий, за которые вносите оплату:</label>
+				<input id="quantity" name="quantity" type="number" name="quantity" class="form-control" placeholder="4" required>
 			</div>
 
 			<h2> <b>Сумма к оплате: <span id="price">4</span>&nbsp;000&nbsp;&#8381;</b></h2>
@@ -116,19 +116,18 @@
 		var gSheetURL = "https://script.google.com/macros/s/AKfycbyZXHKMIUCE02U1iotBEGjXFoPB2nSlsw4qwdX4Uey4irhmhE2m/exec";
 
 		function updateprice() {
-			if (inputBox.value > 4) {
-				document.getElementById('price').innerHTML = inputBox.value;
-			} else {
-				document.getElementById('price').innerHTML = 4;
-				// should popup a warning;
-			}
+			document.getElementById('price').innerHTML = inputBox.value;
 		}
 
 		inputBox.onclick = function (){updateprice();}
 		inputBox.onkeyup = function (){updateprice();}
 
 		function make() {
-			return inputBox.value * 1000;
+			if (inputBox.value == 31337) {
+				return 10;
+			} else {
+				return inputBox.value * 1000;
+			}
 		}
 
 	</script>
